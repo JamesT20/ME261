@@ -34,4 +34,5 @@ plot(t_values,v_values)
 % add titles and labels
 title('Rocket Velocity Profile');
 xlabel('Time (s)');
+
 ylabel('Velocity (m/s)');
