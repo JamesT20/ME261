@@ -1,0 +1,108 @@
+===========================
+ MATLAB Notes
+===========================
+
+Workspace and File Management
+--------------------------------
+clc             - Clear the command window
+clear           - Remove all variables from workspace
+clear x         - Remove variable 'x'
+close all       - Close all figure windows
+
+Mathematical Operations
+--------------------------
++ - * /         - Basic arithmetic
+.^ .* ./ .\     - Element-wise operations
+^               - Power
+sqrt(x)         - Square root
+abs(x)          - Absolute value
+round(x)        - Round to nearest integer
+floor(x)        - Round down
+ceil(x)         - Round up
+mod(a,b)        - Modulus
+exp(x)          - Exponential (e^x)
+log(x)          - Natural logarithm
+log10(x)        - Base-10 logarithm
+sin, cos, tan   - Trigonometric functions (in radians)
+
+Vectors and Matrices
+------------------------
+[a b c]         - Row vector
+[a; b; c]       - Column vector
+A = [1 2; 3 4]  - Define a 2x2 matrix
+zeros(n,m)      - Create n-by-m zero matrix
+ones(n,m)       - Create n-by-m ones matrix
+eye(n)          - Identity matrix
+length(x)       - Length of vector
+size(A)         - Dimensions of matrix
+A(i,j)          - Element at row i, column j
+A(:,j)          - All rows, column j
+A(i,:)          - Row i, all columns
+A'              - Transpose of matrix A
+
+Control Flow
+---------------
+if ... end                  - Conditional execution
+if ... else ... end         - If-else statement
+if ... elseif ... else ... end - Multi-condition logic
+for i = 1:n ... end         - For loop
+while condition ... end     - While loop
+break                       - Exit loop early
+continue                    - Skip to next iteration
+
+Logical Operations
+---------------------
+==      - Equal to
+~=      - Not equal to
+< > <= >= - Comparisons
+&       - Logical AND
+|       - Logical OR
+~       - Logical NOT
+
+Common Functions
+-------------------
+disp(x)         - Display output
+input('text')   - Get user input
+sum(x)          - Sum of array elements
+mean(x)         - Average value
+max(x)          - Maximum value
+min(x)          - Minimum value
+sort(x)         - Sort in ascending order
+find(x)         - Find indices of non-zero elements
+linspace(a,b,n) - Generate n linearly spaced points
+rand(n,m)       - Uniform random numbers
+randn(n,m)      - Normally distributed random numbers
+
+Plotting
+-----------
+plot(x, y)             - 2D line plot
+xlabel('text')         - Label x-axis
+ylabel('text')         - Label y-axis
+title('text')          - Add plot title
+legend('A', 'B')       - Add legend
+grid on                - Turn on grid
+axis([xmin xmax ymin ymax]) - Set axis limits
+subplot(m,n,p)         - Create subplot grid
+hold on / hold off     - Overlay multiple plots
+
+fprint Format specifiers
+-----------
+
+| Specifier | Description          | Example Output |
+| --------- | -------------------- | -------------- |
+| `%d`      | Integer (decimal)    | `42`           |
+| `%f`      | Fixed-point notation | `3.141593`     |
+| `%.2f`    | 2 decimal places     | `3.14`         |
+| `%e`      | Scientific notation  | `3.14e+00`     |
+| `%s`      | String               | `Hello`        |
+| `%c`      | Character            | `A`            |
+| `%%`      | Percent sign         | `%`            |
+| `\n`      | New line             | (line break)   |
+| `\t`      | Tab                  | (tab space)    |
+
+
+Help and Documentation
+-------------------------
+help function     - Quick help for a function
+doc function      - Open documentation in help browser
+lookfor keyword   - Search functions by keyword
