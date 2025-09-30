@@ -17,7 +17,7 @@ ans_2 = mat1(mat1 > mat2)
 
 % Problem 3
 
-ans_3 = mat2(mat1 < mat2)
+ans_3 = mat2(mat1 > mat2)
 
 % Problem 4
 
