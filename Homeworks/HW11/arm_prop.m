@@ -9,10 +9,10 @@ end
 function [gm] = geo_mean(n,x)
     xProduct = 1;
     % multiply all the x values together
-    for i 1:n
+    for i = 1:n
         xProduct = xProduct * x(i);
-
-    gm = nthroot(xProduct,n);
+    end
+    gm = xProduct^(1/n);
 end
 
 % RMS avg
