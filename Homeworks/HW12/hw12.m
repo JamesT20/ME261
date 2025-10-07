@@ -30,5 +30,5 @@ while current_percent > threshold_percent
     current_solution = new_solution;
     iterations = iterations + 1;
 end 
-new_solution
-iterations
+fprintf("sin(%.2f) =  %.6f\n",sin_value,new_solution);
+fprintf("It took %d iterations to converge\n",iterations)
