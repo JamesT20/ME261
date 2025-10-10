@@ -1,21 +1,21 @@
 function [root,iterations] = bisect(yl,yu,es,maxn,fh)
-    %FUNCTION Summary of this function goes here
-    %   Detailed explanation goes here
-  
-    % solve with current params,
-    
+    %bisect find a root by bisection
+   
     % initialize values
-    ea = 100;
-    count = 0;
-    yo = (yu + yl)/2;
+    ea      = 100;
+    count   = 0;
+    yo      = yl;
 
     % run until acceptable convergence or max iterations
-    while ea > es && count <= maxn
+    while ea > es && count < maxn
+        
         % calculate the middle y
-        ym = (yu + yl)/2
-        % calculate the values of middle y and low y
+        ym = (yu + yl)/2;
+
+        % calculate the values of middle y and low y with the function
         vm = fh(ym);
         vl = fh(yl);
+
         % determine if on lower or upper
         if vl * vm > 0
             yl = ym;
@@ -26,7 +26,7 @@ function [root,iterations] = bisect(yl,yu,es,maxn,fh)
         end
         
         % calculate error 
-        ea = 100 * abs((ym-yo)/ym);
+        ea = 100* abs((ym-yo)/ym);
         
         % set current middle to old y
         yo = ym;
