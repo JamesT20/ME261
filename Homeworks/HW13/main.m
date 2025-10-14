@@ -1,7 +1,7 @@
 clc
 clear
 % parameters for the bisection
-sigfigs     = 4;
+sigfigs     = 5;
 y_low       = 0.5;
 y_up        = 2.5;
 maxn        = 10;
