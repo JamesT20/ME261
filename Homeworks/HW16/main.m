@@ -5,14 +5,16 @@ x1 = input('Enter a guess for the root of f(x): ');
 x2 = input('Enter another guess for the root of f(x): ');
 % set defaults
 n            = 5; 
-es           =  5*10^(2-n);
+es           = 5*10^(2-n);
 
 % calcualte root and iterations
-[root, iterations] = secantmethod(es,x1,x2,@equation);
+[root, iterations] = sec_method(es,x1,x2,@equation);
+rootfz             = fzero(@equation,x1);
 
 % display results
-fprintf('\nThe root of f(x) is %.3f\n', root)
-fprintf('\nIt took %d iterations to converge \n\n', iterations)
+fprintf('The root of f(x) by secant method is %.5f\n', root)
+fprintf('The root of f(x) by fzero method is %.5f\n', rootfz)
+fprintf('It took %d iterations to converge by secant method\n\n', iterations)
 
 % function eqation
 function [g] = equation(x)

@@ -1,4 +1,4 @@
-function [root,iterations] = secantmethod(es,x1,x2,fh)
+function [root,iterations] = sec_method(es,x1,x2,fh)
     % initialize values
     ea      = 100;
     count   = 0;
